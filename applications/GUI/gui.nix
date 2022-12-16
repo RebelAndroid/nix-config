@@ -8,6 +8,7 @@
     firefox
     xarchiver
     krita
+    gparted
   ];
   xdg.configFile."alacritty/alacritty.yml".source = ./alacritty.yaml;
 
