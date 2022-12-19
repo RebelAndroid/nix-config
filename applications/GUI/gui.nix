@@ -9,6 +9,10 @@
     xarchiver
     krita
     gparted
+    xfce.thunar
+    xfce.thunar-archive-plugin
+    xfce.thunar-volman
+    kate
   ];
   xdg.configFile."alacritty/alacritty.yml".source = ./alacritty.yaml;
 
