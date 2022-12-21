@@ -5,5 +5,7 @@
     alejandra
     cbonsai
     gh
+    compsize
+    yt-dlp
   ];
 }
