@@ -42,7 +42,6 @@
     git
     nano
   ];
-  environment.interactiveShellInit.source = "alias bottom btm\n";
 
   nix.extraOptions = ''
     experimental-features = nix-command flakes
