@@ -7,5 +7,6 @@
     gh
     compsize
     yt-dlp
+    bottom
   ];
 }

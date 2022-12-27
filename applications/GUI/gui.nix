@@ -14,6 +14,7 @@
     xfce.thunar-volman
     kate
     freetube
+    prismlauncher
   ];
   xdg.configFile."alacritty/alacritty.yml".source = ./alacritty.yaml;
 
