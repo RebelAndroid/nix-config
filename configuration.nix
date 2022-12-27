@@ -42,6 +42,7 @@
     git
     nano
   ];
+  environment.interactiveShellInit.source = ./shell_init.txt;
 
   nix.extraOptions = ''
     experimental-features = nix-command flakes
