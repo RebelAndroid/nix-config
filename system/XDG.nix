@@ -12,10 +12,4 @@
     pictures = /home/christopher/pictures;
     videos = /home/christopher/videos;
   };
-
-  xdg.mimeApps = {
-    enable = true;
-    defaultApplications = {
-    };
-  };
 }
