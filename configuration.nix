@@ -42,6 +42,9 @@
     git
     nano
   ];
+  environment.shellAliases = {
+    bottom = "btm";
+  };
 
   nix.extraOptions = ''
     experimental-features = nix-command flakes
