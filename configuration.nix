@@ -42,7 +42,7 @@
     git
     nano
   ];
-  environment.interactiveShellInit.source = ./shell_init.txt;
+  environment.interactiveShellInit.source = "alias bottom btm\n";
 
   nix.extraOptions = ''
     experimental-features = nix-command flakes
