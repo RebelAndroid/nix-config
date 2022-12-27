@@ -9,4 +9,5 @@
     yt-dlp
     bottom
   ];
+  environment.interactiveShellInit.source = ./shell_init.txt;
 }
