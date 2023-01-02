@@ -15,6 +15,7 @@
     kate
     freetube
     prismlauncher
+    cubiomes-viewer
   ];
   xdg.configFile."alacritty/alacritty.yml".source = ./alacritty.yaml;
 

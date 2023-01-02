@@ -8,5 +8,6 @@
     compsize
     yt-dlp
     bottom
+    jdk17
   ];
 }
