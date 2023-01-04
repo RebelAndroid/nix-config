@@ -9,5 +9,7 @@
     yt-dlp
     bottom
     jdk17
+    smartmontools
+    lm_sensors
   ];
 }
