@@ -16,6 +16,7 @@
     freetube
     prismlauncher
     cubiomes-viewer
+    onlyoffice-bin
   ];
   xdg.configFile."alacritty/alacritty.yml".source = ./alacritty.yaml;
 
