@@ -17,6 +17,7 @@
     prismlauncher
     cubiomes-viewer
     onlyoffice-bin
+    keepassxc
   ];
   xdg.configFile."alacritty/alacritty.yml".source = ./alacritty.yaml;
 
