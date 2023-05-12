@@ -73,6 +73,20 @@
   ];
   programs.steam.enable = true;
 
+ # enable auto upgrade
+  system.autoUpgrade = {
+				enable = true;
+				dates = "4:00";
+				flake = "~/nix";
+				flags = ["--update-input" "nixpkgs"];
+				allowReboot = true;
+			};
+  nix.gc = {
+    automatic = true;
+    dates = "weekly";
+    options = "--delete-older-than 30d";
+  };
+
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
   # on your system were taken. It‘s perfectly fine and recommended to leave
