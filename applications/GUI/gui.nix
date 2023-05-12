@@ -18,6 +18,8 @@
     cubiomes-viewer
     onlyoffice-bin
     keepassxc
+    inkscape
+    vlc
   ];
   xdg.configFile."alacritty/alacritty.yml".source = ./alacritty.yaml;
 
@@ -26,6 +28,8 @@
     extensions = with pkgs.vscode-extensions; [
       rust-lang.rust-analyzer
       jnoortheen.nix-ide
+      james-yu.latex-workshop
+      ms-python.python
     ];
     enable = true;
   };

@@ -11,5 +11,6 @@
     jdk17
     smartmontools
     lm_sensors
+    texlive.combined.scheme-full
   ];
 }
