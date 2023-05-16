@@ -20,6 +20,7 @@
     keepassxc
     inkscape
     vlc
+    galculator
   ];
   xdg.configFile."alacritty/alacritty.yml".source = ./alacritty.yaml;
 
