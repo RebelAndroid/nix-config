@@ -1,6 +1,5 @@
 {pkgs, ...}: {
   home.packages = with pkgs; [
-    zoom-us
     gimp
     vscodium
     librewolf
@@ -21,6 +20,9 @@
     inkscape
     vlc
     galculator
+    godot_4
+    blender
+    kronometer
   ];
   xdg.configFile."alacritty/alacritty.yml".source = ./alacritty.yaml;
 

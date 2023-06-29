@@ -12,5 +12,7 @@
     smartmontools
     lm_sensors
     texlive.combined.scheme-full
+    timer
+    sox
   ];
 }

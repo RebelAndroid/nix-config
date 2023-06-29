@@ -16,10 +16,10 @@
 		system = "x86_64-linux";
 		pkgs = import nixpkgs {
 			inherit system;
-			config.allowUnfreePredicate = pkg:
-				builtins.elem (nixpkgs.lib.getName pkg) [
-					"zoom"
-				];
+			# config.allowUnfreePredicate = pkg:
+			# 	builtins.elem (nixpkgs.lib.getName pkg) [
+			# 		"zoom"
+			# 	];
 		};
 	in {
 		homeConfigurations."christopher@fighting-falcon" = home-manager.lib.homeManagerConfiguration {
