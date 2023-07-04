@@ -1,2 +1,0 @@
-alias bottom btm
-neofetch
