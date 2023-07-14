@@ -14,5 +14,7 @@
     texlive.combined.scheme-full
     timer
     sox
+    nix-index
+    apparmor-utils
   ];
 }

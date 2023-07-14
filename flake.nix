@@ -16,10 +16,12 @@
 		system = "x86_64-linux";
 		pkgs = import nixpkgs {
 			inherit system;
-			# config.allowUnfreePredicate = pkg:
-			# 	builtins.elem (nixpkgs.lib.getName pkg) [
-			# 		"zoom"
-			# 	];
+			 config.allowUnfreePredicate = pkg: builtins.elem (pkgs.lib.getName pkg) [
+    		"steam"
+    		"steam-original"
+    		"steam-runtime"
+    		"steam-run"
+  		];
 		};
 	in {
 		homeConfigurations."christopher@fighting-falcon" = home-manager.lib.homeManagerConfiguration {
@@ -39,6 +41,7 @@
 		};
 		
 		nixosConfigurations.fighting-falcon = nixpkgs.lib.nixosSystem {
+			inherit pkgs;
 			system = "x86_64-linux";
 			modules = [
 				./configuration.nix
