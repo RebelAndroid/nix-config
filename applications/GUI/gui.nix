@@ -22,7 +22,8 @@
     galculator
     godot_4
     blender
-    starship
+    
+    libreoffice
   ];
   xdg.configFile."alacritty/alacritty.yml".source = ./alacritty.yaml;
   xdg.configFile."fish/config.fish".source = ./config.fish;

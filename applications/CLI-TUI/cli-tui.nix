@@ -16,5 +16,8 @@
     sox
     nix-index
     apparmor-utils
+    gptfdisk
+    starship
+    nixpkgs-fmt
   ];
 }
