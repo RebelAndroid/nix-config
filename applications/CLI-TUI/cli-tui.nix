@@ -19,5 +19,6 @@
     gptfdisk
     starship
     nixpkgs-fmt
+    scowl
   ];
 }
