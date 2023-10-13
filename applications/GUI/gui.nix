@@ -22,7 +22,6 @@
     galculator
     godot_4
     blender
-    
     libreoffice
   ];
   xdg.configFile."alacritty/alacritty.yml".source = ./alacritty.yaml;

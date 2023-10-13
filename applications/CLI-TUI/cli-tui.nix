@@ -20,5 +20,6 @@
     starship
     nixpkgs-fmt
     scowl
+    cloc
   ];
 }
