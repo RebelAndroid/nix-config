@@ -67,14 +67,14 @@
 
   programs.steam.enable = true;
 
- # enable auto upgrade
+  # enable auto upgrade
   system.autoUpgrade = {
-				enable = true;
-				dates = "4:00";
-				flake = "~/nix";
-				flags = ["--update-input" "nixpkgs"];
-				allowReboot = true;
-			};
+    enable = true;
+    dates = "4:00";
+    flake = "~/nix";
+    flags = ["--update-input" "nixpkgs"];
+    allowReboot = true;
+  };
   nix.gc = {
     automatic = true;
     dates = "weekly";
@@ -85,59 +85,59 @@
   security.apparmor.policies."bin.firefox" = {
     enable = true;
     enforce = true;
-    profile = ''profile ${pkgs.firefox}/bin/firefox ${pkgs.firefox}/bin/firefox {
-      # run bin/firefox with this profile
-      ${pkgs.firefox}/bin/firefox ix,
-      ${pkgs.firefox}/lib/firefox/firefox ix,
-      #
-      ${pkgs.firefox}/** rm,
-      #glibc and locales
-      /nix/store/** rm,
+    profile = ''      profile ${pkgs.firefox}/bin/firefox ${pkgs.firefox}/bin/firefox {
+            # run bin/firefox with this profile
+            ${pkgs.firefox}/bin/firefox ix,
+            ${pkgs.firefox}/lib/firefox/firefox ix,
+            #
+            ${pkgs.firefox}/** rm,
+            #glibc and locales
+            /nix/store/** rm,
 
-      # terminal files
-      /dev/tty rw,
-      /dev/pts/0 rw,
+            # terminal files
+            /dev/tty rw,
+            /dev/pts/0 rw,
 
-      /dev/null w,
+            /dev/null w,
 
-      # list of filesystems supported by kernel
-      /proc/filesystems r,
+            # list of filesystems supported by kernel
+            /proc/filesystems r,
 
-      # cpu info
-      /proc/cpuinfo r,
+            # cpu info
+            /proc/cpuinfo r,
 
-    }'';
+          }'';
   };
 
   security.apparmor.policies."bin.galculator" = {
     enable = true;
     enforce = true;
-    profile = ''profile ${pkgs.galculator}/bin/galculator ${pkgs.galculator}/bin/galculator {
-      # nix store
-      /nix/store/** rm,
+    profile = ''      profile ${pkgs.galculator}/bin/galculator ${pkgs.galculator}/bin/galculator {
+            # nix store
+            /nix/store/** rm,
 
-      # config, TODO: use XDG
-      /home/christopher/.config/galculator/galculator.conf rw,
+            # config, TODO: use XDG
+            /home/christopher/.config/galculator/galculator.conf rw,
 
-      # gtk settings
-      /home/christopher/.config/gtk-3.0/settings.ini r,
-      /home/christopher/.config/gtk-3.0/gtk.css r,
-      /home/christopher/.config/gtk-3.0/colors.css r,
+            # gtk settings
+            /home/christopher/.config/gtk-3.0/settings.ini r,
+            /home/christopher/.config/gtk-3.0/gtk.css r,
+            /home/christopher/.config/gtk-3.0/colors.css r,
 
-      # random number generator
-      /dev/urandom r,
+            # random number generator
+            /dev/urandom r,
 
-      # icons
-      /home/christopher/.local/share/icons r,
-      /home/christopher/.local/share/icons/hicolor/16x16/apps/ r,
-      /home/christopher/.local/share/icons/hicolor/24x24/apps/ r,
-      /home/christopher/.local/share/icons/hicolor/32x32/apps/ r,
-      /home/christopher/.local/share/icons/hicolor/48x48/apps/ r,
-      /home/christopher/.local/share/icons/hicolor/256x256/apps/ r,
+            # icons
+            /home/christopher/.local/share/icons r,
+            /home/christopher/.local/share/icons/hicolor/16x16/apps/ r,
+            /home/christopher/.local/share/icons/hicolor/24x24/apps/ r,
+            /home/christopher/.local/share/icons/hicolor/32x32/apps/ r,
+            /home/christopher/.local/share/icons/hicolor/48x48/apps/ r,
+            /home/christopher/.local/share/icons/hicolor/256x256/apps/ r,
 
-      # filesystems supported by the kernel
-      /proc/filesystems r,
-    }'';
+            # filesystems supported by the kernel
+            /proc/filesystems r,
+          }'';
   };
 
   security.apparmor.packages = [pkgs.firefox];

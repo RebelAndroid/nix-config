@@ -1,28 +1,24 @@
 {pkgs, ...}: {
   home.packages = with pkgs; [
-    gimp
-    vscodium
-    librewolf
     alacritty
-    firefox
-    xarchiver
-    krita
-    gparted
-    xfce.thunar
-    xfce.thunar-archive-plugin
-    xfce.thunar-volman
-    kate
-    freetube
-    prismlauncher
-    cubiomes-viewer
-    onlyoffice-bin
-    keepassxc
-    inkscape
-    vlc
-    galculator
-    godot_4
     blender
+    cubiomes-viewer
+    firefox
+    freetube
+    galculator
+    gimp
+    godot_4
+    gparted
+    inkscape
+    kate
+    keepassxc
+    krita
     libreoffice
+    librewolf
+    onlyoffice-bin
+    prismlauncher
+    vlc
+    vscodium
   ];
   xdg.configFile."alacritty/alacritty.yml".source = ./alacritty.yaml;
   xdg.configFile."fish/config.fish".source = ./config.fish;
