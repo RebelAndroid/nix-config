@@ -21,5 +21,6 @@
     nixpkgs-fmt
     scowl
     cloc
+    file
   ];
 }

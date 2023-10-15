@@ -81,7 +81,6 @@
     options = "--delete-older-than 30d";
   };
 
-  #${builtins.elemAt (builtins.filter (lib.strings.hasInfix "gcc") pkgs.firefox.buildInputs) 0}/** r,
   security.apparmor.enable = true;
   security.apparmor.policies."bin.firefox" = {
     enable = true;
