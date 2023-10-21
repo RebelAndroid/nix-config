@@ -21,8 +21,12 @@
   services.xserver.enable = true;
 
   # Enable the Plasma 5 Desktop Environment.
-  services.xserver.displayManager.sddm.enable = true;
-  services.xserver.desktopManager.plasma5.enable = true;
+  # services.xserver.displayManager.sddm.enable = true;
+  # services.xserver.desktopManager.plasma5.enable = true;
+
+  # Enable gnome
+  services.xserver.displayManager.gdm.enable = true;
+  services.xserver.desktopManager.gnome.enable = true;
 
   services.printing.enable = true;
 
@@ -42,6 +46,7 @@
   environment.systemPackages = with pkgs; [
     git
     nano
+    gnomeExtensions.dash-to-panel
   ];
   environment.shellAliases = {
     bottom = "btm";
