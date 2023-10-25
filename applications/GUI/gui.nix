@@ -1,16 +1,11 @@
 {pkgs, ...}: {
   home.packages = with pkgs; [
     alacritty
-    blender
     cubiomes-viewer
     firefox
-    freetube
     galculator
     gimp
-    godot_4
-    gparted
     inkscape
-    kate
     keepassxc
     krita
     libreoffice

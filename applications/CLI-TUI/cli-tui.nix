@@ -3,7 +3,6 @@
     alejandra
     apparmor-utils
     bottom
-    cbonsai
     cloc
     compsize
     file
@@ -17,11 +16,9 @@
     pstree
     scowl
     smartmontools
-    sox
     starship
     texlive.combined.scheme-full
     timer
-    yt-dlp
     dconf2nix
   ];
 }
