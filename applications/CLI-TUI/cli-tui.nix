@@ -22,5 +22,6 @@
     texlive.combined.scheme-full
     timer
     yt-dlp
+    dconf2nix
   ];
 }

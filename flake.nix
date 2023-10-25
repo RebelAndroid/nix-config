@@ -32,6 +32,7 @@
         ./system/XDG.nix
         ./applications/GUI
         ./applications/CLI-TUI
+        ./dconf
         ({...}: {
           home.stateVersion = "22.11";
           home.username = "christopher";
