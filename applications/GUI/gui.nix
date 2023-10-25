@@ -19,6 +19,9 @@
     prismlauncher
     vlc
     vscodium
+    gnomeExtensions.dash-to-panel
+    gnomeExtensions.just-perfection
+    gnomeExtensions.caffeine
   ];
   xdg.configFile."alacritty/alacritty.yml".source = ./alacritty.yaml;
   xdg.configFile."fish/config.fish".source = ./config.fish;

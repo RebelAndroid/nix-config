@@ -42,12 +42,38 @@
       ];
     };
 
+    homeConfigurations."christopher@laptop" = home-manager.lib.homeManagerConfiguration {
+      inherit pkgs;
+      extraSpecialArgs = inputs;
+      modules = [
+       ./system/XDG.nix
+       ./applications/GUI
+       ./applications/CLI-TUI
+       ./dconf
+       ({...}: {
+         home.stateVersion = "22.11";
+         home.username = "christopher";
+         home.homeDirectory = "/home/christopher";
+         programs.direnv.enable = true;
+        })
+       ];
+     };
     nixosConfigurations.fighting-falcon = nixpkgs.lib.nixosSystem {
       inherit pkgs;
       system = "x86_64-linux";
       modules = [
         ./configuration.nix
+        ./hardware-configuration.nix
       ];
     };
-  };
+
+   nixosConfigurations.laptop = nixpkgs.lib.nixosSystem {
+    inherit pkgs;
+    system = "x86_64-linux";
+    modules = [
+      ./configuration.nix
+      ./laptop-hardware-configuration.nix
+    ];
+   };
+ };
 }

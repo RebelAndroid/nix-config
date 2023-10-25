@@ -37,7 +37,7 @@
 
   security.apparmor.policies."bin.firefox" = {
     enable = true;
-    enforce = true;
+    enforce = false;
     profile = ''      /nix/store/**/bin/firefox {
             # run bin/firefox with this profile
             ${pkgs.firefox}/bin/firefox ix,
