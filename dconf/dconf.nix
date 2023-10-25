@@ -35,7 +35,7 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/control-center" = {
-      last-panel = "multitasking";
+      last-panel = "power";
       window-state = mkTuple [ 980 640 ];
     };
 
@@ -101,6 +101,7 @@ with lib.hm.gvariant;
       enable-hot-corners = false;
       icon-theme = "Adwaita";
       overlay-scrolling = true;
+      show-battery-percentage = true;
       toolkit-accessibility = false;
     };
 
@@ -299,8 +300,8 @@ with lib.hm.gvariant;
     };
 
     "org/gtk/gtk4/settings/color-chooser" = {
-      custom-colors = [ (mkTuple [ 0.7843137383460999 0.7843137383460999 ]) (mkTuple [ 0.7490196228027344 0.250980406999588 ]) ];
-      selected-color = mkTuple [ true 0.7490196228027344 ];
+      custom-colors = [ (mkTuple [ 0.784314 0.784314 ]) (mkTuple [ 0.74902 0.25098 ]) ];
+      selected-color = mkTuple [ true 0.74902 ];
     };
 
     "org/gtk/gtk4/settings/file-chooser" = {
