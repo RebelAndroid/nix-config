@@ -6,7 +6,7 @@ with lib.hm.gvariant;
 {
   dconf.settings = {
     "org/freedesktop/tracker/miner/files" = {
-      index-recursive-directories = [ "&DESKTOP" "&PICTURES" ];
+      index-recursive-directories = [];
     };
 
     "org/gnome/Geary" = {
@@ -98,6 +98,7 @@ with lib.hm.gvariant;
     "org/gnome/desktop/interface" = {
       color-scheme = "prefer-dark";
       cursor-size = 24;
+      enable-animations = true;
       enable-hot-corners = false;
       icon-theme = "Adwaita";
       overlay-scrolling = true;
@@ -216,7 +217,7 @@ with lib.hm.gvariant;
 
     "org/gnome/shell" = {
       disabled-extensions = [ "apps-menu@gnome-shell-extensions.gcampax.github.com" "workspace-indicator@gnome-shell-extensions.gcampax.github.com" ];
-      enabled-extensions = [ "dash-to-panel@jderose9.github.com" "launch-new-instance@gnome-shell-extensions.gcampax.github.com" ];
+      enabled-extensions = [ "dash-to-panel@jderose9.github.com" "launch-new-instance@gnome-shell-extensions.gcampax.github.com" "just-perfection-desktop@just-perfection" ];
       favorite-apps = [ "librewolf.desktop" "Alacritty.desktop" "org.gnome.Nautilus.desktop" "codium.desktop" "org.prismlauncher.PrismLauncher.desktop" "steam.desktop" ];
       last-selected-power-profile = "power-saver";
       welcome-dialog-last-shown-version = "44.1";
@@ -293,6 +294,28 @@ with lib.hm.gvariant;
       tray-padding = -1;
       tray-size = 16;
       window-preview-title-position = "TOP";
+    };
+
+    "org/gnome/shell/extensions/just-perfection" = {
+      accessibility-menu = false;
+      app-menu = false;
+      app-menu-icon = false;
+      dash-icon-size = 16;
+      hot-corner = true;
+      panel = true;
+      panel-arrow = false;
+      panel-corner-size = 1;
+      panel-in-overview = true;
+      ripple-box = false;
+      search = false;
+      show-apps-button = false;
+      startup-status = 0;
+      theme = true;
+      window-demands-attention-focus = true;
+      window-picker-icon = false;
+      workspace = false;
+      workspace-switcher-size = 0;
+      workspaces-in-app-grid = false;
     };
 
     "org/gnome/shell/world-clocks" = {

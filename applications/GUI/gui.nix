@@ -12,8 +12,10 @@
     librewolf
     onlyoffice-bin
     prismlauncher
+    qpdfview
     vlc
     vscodium
+    xournal
     gnomeExtensions.dash-to-panel
     gnomeExtensions.just-perfection
     gnomeExtensions.caffeine
@@ -29,6 +31,7 @@
       jnoortheen.nix-ide
       james-yu.latex-workshop
       ms-python.python
+      hashicorp.terraform
     ];
     enable = true;
   };
