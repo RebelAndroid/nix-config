@@ -73,7 +73,7 @@
     experimental-features = nix-command flakes
   '';
 
-  fonts.fonts = with pkgs; [
+  fonts.packages = with pkgs; [
     jetbrains-mono
   ];
 
