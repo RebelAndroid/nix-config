@@ -170,8 +170,12 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/desktop/wm/keybindings" = {
+      switch-applications = [];
+      switch-applications-backward = [];
       switch-to-workspace-left = [ "<Super>q" ];
       switch-to-workspace-right = [ "<Super>w" ];
+      switch-windows = [ "<Alt>Tab" ];
+      switch-windows-backward = [ "<Shift><Alt>Tab" ];
     };
 
     "org/gnome/desktop/wm/preferences" = {
