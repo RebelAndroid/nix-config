@@ -32,6 +32,7 @@
       james-yu.latex-workshop
       ms-python.python
       hashicorp.terraform
+      llvm-vs-code-extensions.vscode-clangd
     ];
     enable = true;
   };

@@ -5,6 +5,7 @@
     bottom
     cloc
     compsize
+    dconf2nix
     file
     gh
     gptfdisk
@@ -19,6 +20,5 @@
     starship
     texlive.combined.scheme-full
     timer
-    dconf2nix
   ];
 }
