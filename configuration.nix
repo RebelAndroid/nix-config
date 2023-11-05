@@ -22,6 +22,13 @@
   services.xserver.displayManager.gdm.enable = true;
   services.xserver.desktopManager.gnome.enable = true;
 
+  # enable autologin
+  services.xserver.displayManager.autoLogin.enable = true;
+  services.xserver.displayManager.autoLogin.user = "christopher";
+  # workaround to fix autologin
+  systemd.services."getty@tty1".enable = false;
+  systemd.services."autovt@tty1".enable = false;
+
   environment.gnome.excludePackages =
     (with pkgs; [
       gnome-photos
@@ -66,7 +73,8 @@
     nano
   ];
   environment.shellAliases = {
-    bottom = "btm";
+    #bottom = "btm";
+    btm = "btm --mem_as_value";
   };
 
   nix.extraOptions = ''
