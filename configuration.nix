@@ -1,7 +1,8 @@
-{ config
-, pkgs
-, lib
-, ...
+{
+  config,
+  pkgs,
+  lib,
+  ...
 }: {
   imports = [
     ./apparmor-configuration.nix
@@ -21,28 +22,27 @@
   services.xserver.displayManager.gdm.enable = true;
   services.xserver.desktopManager.gnome.enable = true;
 
-
-
-  environment.gnome.excludePackages = (with pkgs; [
-    gnome-photos
-    gnome-tour
-  ]) ++ (with pkgs.gnome; [
-    cheese # webcam tool
-    gnome-music
-    gnome-terminal
-    gedit # text editor
-    epiphany # web browser
-    geary # email reader
-    #evince # document viewer
-    gnome-characters
-    totem # video player
-    tali # poker game
-    iagno # go game
-    hitori # sudoku game
-    atomix # puzzle game
-    gnome-calendar
-  ]);
-
+  environment.gnome.excludePackages =
+    (with pkgs; [
+      gnome-photos
+      gnome-tour
+    ])
+    ++ (with pkgs.gnome; [
+      cheese # webcam tool
+      gnome-music
+      gnome-terminal
+      gedit # text editor
+      epiphany # web browser
+      geary # email reader
+      #evince # document viewer
+      gnome-characters
+      totem # video player
+      tali # poker game
+      iagno # go game
+      hitori # sudoku game
+      atomix # puzzle game
+      gnome-calendar
+    ]);
 
   services.printing.enable = true;
 
@@ -57,7 +57,7 @@
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.christopher = {
     isNormalUser = true;
-    extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
+    extraGroups = ["wheel"]; # Enable ‘sudo’ for the user.
     password = "password";
   };
 
@@ -86,7 +86,7 @@
     shell = pkgs.fish;
   };
   programs.fish.enable = true;
-  environment.pathsToLink = [ "/share/fish" ];
+  environment.pathsToLink = ["/share/fish"];
 
   programs.steam.enable = true;
 
@@ -95,7 +95,7 @@
     enable = true;
     dates = "4:00";
     flake = "~/nix";
-    flags = [ "--update-input" "nixpkgs" ];
+    flags = ["--update-input" "nixpkgs"];
     allowReboot = true;
   };
   nix.gc = {
@@ -106,7 +106,7 @@
 
   security.apparmor.enable = true;
 
-  security.apparmor.packages = [ pkgs.firefox ];
+  security.apparmor.packages = [pkgs.firefox];
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions

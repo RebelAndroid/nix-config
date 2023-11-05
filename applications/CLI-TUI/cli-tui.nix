@@ -12,6 +12,7 @@
     jdk17
     lm_sensors
     neofetch
+    nil
     nix-index
     nixpkgs-fmt
     pstree

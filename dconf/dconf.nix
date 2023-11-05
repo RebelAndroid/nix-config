@@ -1,9 +1,6 @@
 # Generated via dconf2nix: https://github.com/gvolpe/dconf2nix
-{ lib, ... }:
-
-with lib.hm.gvariant;
-
-{
+{lib, ...}:
+with lib.hm.gvariant; {
   dconf.settings = {
     "org/freedesktop/tracker/miner/files" = {
       index-recursive-directories = [];
@@ -31,12 +28,12 @@ with lib.hm.gvariant;
     "org/gnome/calendar" = {
       active-view = "month";
       window-maximized = true;
-      window-size = mkTuple [ 768 600 ];
+      window-size = mkTuple [768 600];
     };
 
     "org/gnome/control-center" = {
       last-panel = "power";
-      window-state = mkTuple [ 980 640 ];
+      window-state = mkTuple [980 640];
     };
 
     "org/gnome/desktop/a11y/applications" = {
@@ -65,18 +62,18 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/desktop/app-folders" = {
-      folder-children = [ "Utilities" "YaST" ];
+      folder-children = ["Utilities" "YaST"];
     };
 
     "org/gnome/desktop/app-folders/folders/Utilities" = {
-      apps = [ "gnome-abrt.desktop" "gnome-system-log.desktop" "nm-connection-editor.desktop" "org.gnome.baobab.desktop" "org.gnome.Connections.desktop" "org.gnome.DejaDup.desktop" "org.gnome.Dictionary.desktop" "org.gnome.DiskUtility.desktop" "org.gnome.eog.desktop" "org.gnome.Evince.desktop" "org.gnome.FileRoller.desktop" "org.gnome.fonts.desktop" "org.gnome.seahorse.Application.desktop" "org.gnome.tweaks.desktop" "org.gnome.Usage.desktop" "vinagre.desktop" ];
-      categories = [ "X-GNOME-Utilities" ];
+      apps = ["gnome-abrt.desktop" "gnome-system-log.desktop" "nm-connection-editor.desktop" "org.gnome.baobab.desktop" "org.gnome.Connections.desktop" "org.gnome.DejaDup.desktop" "org.gnome.Dictionary.desktop" "org.gnome.DiskUtility.desktop" "org.gnome.eog.desktop" "org.gnome.Evince.desktop" "org.gnome.FileRoller.desktop" "org.gnome.fonts.desktop" "org.gnome.seahorse.Application.desktop" "org.gnome.tweaks.desktop" "org.gnome.Usage.desktop" "vinagre.desktop"];
+      categories = ["X-GNOME-Utilities"];
       name = "X-GNOME-Utilities.directory";
       translate = true;
     };
 
     "org/gnome/desktop/app-folders/folders/YaST" = {
-      categories = [ "X-SuSE-YaST" ];
+      categories = ["X-SuSE-YaST"];
       name = "suse-yast.directory";
       translate = true;
     };
@@ -91,8 +88,8 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/desktop/input-sources" = {
-      sources = [ (mkTuple [ "xkb" "us" ]) ];
-      xkb-options = [ "terminate:ctrl_alt_bksp" ];
+      sources = [(mkTuple ["xkb" "us"])];
+      xkb-options = ["terminate:ctrl_alt_bksp"];
     };
 
     "org/gnome/desktop/interface" = {
@@ -109,11 +106,11 @@ with lib.hm.gvariant;
     "org/gnome/desktop/media-handling" = {
       autorun-x-content-ignore = [];
       autorun-x-content-open-folder = [];
-      autorun-x-content-start-app = [ "x-content/ostree-repository" ];
+      autorun-x-content-start-app = ["x-content/ostree-repository"];
     };
 
     "org/gnome/desktop/notifications" = {
-      application-children = [ "org-gnome-characters" "steam" "gnome-power-panel" "org-prismlauncher-prismlauncher" ];
+      application-children = ["org-gnome-characters" "steam" "gnome-power-panel" "org-prismlauncher-prismlauncher"];
     };
 
     "org/gnome/desktop/notifications/application/gnome-power-panel" = {
@@ -162,7 +159,7 @@ with lib.hm.gvariant;
     "org/gnome/desktop/search-providers" = {
       disable-external = false;
       disabled = [];
-      sort-order = [ "org.gnome.Contacts.desktop" "org.gnome.Documents.desktop" "org.gnome.Nautilus.desktop" ];
+      sort-order = ["org.gnome.Contacts.desktop" "org.gnome.Documents.desktop" "org.gnome.Nautilus.desktop"];
     };
 
     "org/gnome/desktop/session" = {
@@ -172,14 +169,14 @@ with lib.hm.gvariant;
     "org/gnome/desktop/wm/keybindings" = {
       switch-applications = [];
       switch-applications-backward = [];
-      switch-to-workspace-left = [ "<Super>q" ];
-      switch-to-workspace-right = [ "<Super>w" ];
-      switch-windows = [ "<Alt>Tab" ];
-      switch-windows-backward = [ "<Shift><Alt>Tab" ];
+      switch-to-workspace-left = ["<Super>q"];
+      switch-to-workspace-right = ["<Super>w"];
+      switch-windows = ["<Alt>Tab"];
+      switch-windows-backward = ["<Shift><Alt>Tab"];
     };
 
     "org/gnome/desktop/wm/preferences" = {
-      workspace-names = [ "Workspace 1" ];
+      workspace-names = ["Workspace 1"];
     };
 
     "org/gnome/epiphany" = {
@@ -188,7 +185,7 @@ with lib.hm.gvariant;
 
     "org/gnome/epiphany/state" = {
       is-maximized = false;
-      window-size = mkTuple [ 1024 768 ];
+      window-size = mkTuple [1024 768];
     };
 
     "org/gnome/evolution-data-server" = {
@@ -207,7 +204,7 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/nautilus/window-state" = {
-      initial-size = mkTuple [ 890 550 ];
+      initial-size = mkTuple [890 550];
       maximized = true;
     };
 
@@ -220,9 +217,9 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/shell" = {
-      disabled-extensions = [ "apps-menu@gnome-shell-extensions.gcampax.github.com" "workspace-indicator@gnome-shell-extensions.gcampax.github.com" ];
-      enabled-extensions = [ "dash-to-panel@jderose9.github.com" "launch-new-instance@gnome-shell-extensions.gcampax.github.com" "just-perfection-desktop@just-perfection" ];
-      favorite-apps = [ "librewolf.desktop" "Alacritty.desktop" "org.gnome.Nautilus.desktop" "codium.desktop" "org.prismlauncher.PrismLauncher.desktop" "steam.desktop" ];
+      disabled-extensions = ["apps-menu@gnome-shell-extensions.gcampax.github.com" "workspace-indicator@gnome-shell-extensions.gcampax.github.com"];
+      enabled-extensions = ["dash-to-panel@jderose9.github.com" "launch-new-instance@gnome-shell-extensions.gcampax.github.com" "just-perfection-desktop@just-perfection"];
+      favorite-apps = ["librewolf.desktop" "Alacritty.desktop" "org.gnome.Nautilus.desktop" "codium.desktop" "org.prismlauncher.PrismLauncher.desktop" "steam.desktop"];
       last-selected-power-profile = "power-saver";
       welcome-dialog-last-shown-version = "44.1";
     };
@@ -240,7 +237,7 @@ with lib.hm.gvariant;
       animate-appicon-hover-animation-type = "SIMPLE";
       appicon-margin = 8;
       appicon-padding = 4;
-      available-monitors = [ 0 ];
+      available-monitors = [0];
       desktop-line-custom-color = "rgb(191,64,64)";
       desktop-line-use-custom-color = false;
       dot-position = "BOTTOM";
@@ -275,7 +272,7 @@ with lib.hm.gvariant;
       primary-monitor = 0;
       progress-show-count = true;
       scroll-panel-action = "SWITCH_WORKSPACE";
-      shortcut = [ "<Super>q" ];
+      shortcut = ["<Super>q"];
       shortcut-text = "<Super>q";
       show-appmenu = false;
       show-apps-icon-file = "";
@@ -327,8 +324,8 @@ with lib.hm.gvariant;
     };
 
     "org/gtk/gtk4/settings/color-chooser" = {
-      custom-colors = [ (mkTuple [ 0.784314 0.784314 ]) (mkTuple [ 0.74902 0.25098 ]) ];
-      selected-color = mkTuple [ true 0.74902 ];
+      custom-colors = [(mkTuple [0.784314 0.784314]) (mkTuple [0.74902 0.25098])];
+      selected-color = mkTuple [true 0.74902];
     };
 
     "org/gtk/gtk4/settings/file-chooser" = {
@@ -343,7 +340,7 @@ with lib.hm.gvariant;
       sort-order = "ascending";
       type-format = "category";
       view-type = "list";
-      window-size = mkTuple [ 1080 716 ];
+      window-size = mkTuple [1080 716];
     };
 
     "org/gtk/settings/file-chooser" = {
@@ -357,9 +354,8 @@ with lib.hm.gvariant;
       sort-directories-first = false;
       sort-order = "ascending";
       type-format = "category";
-      window-position = mkTuple [ 26 23 ];
-      window-size = mkTuple [ 1231 959 ];
+      window-position = mkTuple [26 23];
+      window-size = mkTuple [1231 959];
     };
-
   };
 }
