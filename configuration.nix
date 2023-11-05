@@ -22,7 +22,7 @@
       enable = true;
       user = "christopher";
       dataDir = "/home/christopher/.data/syncthing";
-      configDir = "/home/myusername/.config/syncthing";
+      configDir = "/home/christopher/.config/syncthing";
       overrideDevices = true;     # overrides any devices added or deleted through the WebUI
       overrideFolders = true;     # overrides any folders added or deleted through the WebUI
       settings = {
