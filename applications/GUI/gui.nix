@@ -15,7 +15,7 @@
     qpdfview
     vlc
     vscodium
-    xournal
+    xournalpp
     gnomeExtensions.dash-to-panel
     gnomeExtensions.just-perfection
     gnomeExtensions.caffeine
