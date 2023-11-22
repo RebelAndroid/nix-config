@@ -57,6 +57,8 @@
   systemd.services."getty@tty1".enable = false;
   systemd.services."autovt@tty1".enable = false;
 
+  virtualisation.docker.enable = true;
+
   environment.gnome.excludePackages =
     (with pkgs; [
       gnome-photos
@@ -89,12 +91,10 @@
   # Enable touchpad support
   services.xserver.libinput.enable = true;
 
-  virtualisation.docker.enable = true;
-
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.christopher = {
     isNormalUser = true;
-    extraGroups = ["wheel" "docker"]; # Enable ‘sudo’ for the user.
+    extraGroups = ["wheel" "docker"]; # Enable ‘sudo’ , enable docker
     password = "password";
   };
 

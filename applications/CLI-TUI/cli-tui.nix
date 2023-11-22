@@ -6,6 +6,8 @@
     cloc
     compsize
     dconf2nix
+    docker
+    distrobox
     file
     gh
     gptfdisk
