@@ -34,6 +34,12 @@
           "home-directory" = {        # Name of folder in Syncthing, also the folder ID
             path = "/home/christopher";    # Which folder to add to Syncthing
             devices = [ "fighting-falcon" "laptop" ];      # Which devices to share the folder with
+            versioning = {
+              type = "simple";
+              params = {
+                keep = "10";
+              };
+            };
           };
         };
       };
@@ -83,10 +89,12 @@
   # Enable touchpad support
   services.xserver.libinput.enable = true;
 
+  virtualisation.docker.enable = true;
+
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.christopher = {
     isNormalUser = true;
-    extraGroups = ["wheel"]; # Enable ‘sudo’ for the user.
+    extraGroups = ["wheel" "docker"]; # Enable ‘sudo’ for the user.
     password = "password";
   };
 
