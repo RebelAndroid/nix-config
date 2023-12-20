@@ -12,7 +12,6 @@
     librewolf
     onlyoffice-bin
     prismlauncher
-    qpdfview
     vlc
     vscodium
     xournalpp
@@ -29,9 +28,7 @@
     extensions = with pkgs.vscode-extensions; [
       rust-lang.rust-analyzer
       jnoortheen.nix-ide
-      james-yu.latex-workshop
       ms-python.python
-      hashicorp.terraform
       llvm-vs-code-extensions.vscode-clangd
     ];
     enable = true;

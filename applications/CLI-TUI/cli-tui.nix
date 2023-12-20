@@ -10,11 +10,10 @@
     distrobox
     file
     gh
-    gptfdisk
     jdk17
     lm_sensors
     neofetch
-    nil
+    nil # nix language server
     nix-index
     nixpkgs-fmt
     pstree

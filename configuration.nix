@@ -17,34 +17,7 @@
   time.timeZone = "America/New_York";
 
   services.xserver.enable = true;
-
-  services.syncthing = {    
-      enable = true;
-      user = "christopher";
-      dataDir = "/home/christopher/.data/syncthing";
-      configDir = "/home/christopher/.config/syncthing";
-      overrideDevices = true;     # overrides any devices added or deleted through the WebUI
-      overrideFolders = true;     # overrides any folders added or deleted through the WebUI
-      settings = {
-        devices = {
-          "fighting-falcon" = { id = "YJQVJ2A-MAB6VYC-NHNIQF5-I6WX5NX-V6URDYS-OKV2Q4J-UGTFIDG-N5WYJAB"; };
-          "laptop" = { id = "FEIWANR-HOROKFN-JD3SRTM-QMZ3DS2-447O5VD-4VET64D-QRYSHJG-6DNN3QD"; };
-        };
-        folders = {
-          "home-directory" = {        # Name of folder in Syncthing, also the folder ID
-            path = "/home/christopher";    # Which folder to add to Syncthing
-            devices = [ "fighting-falcon" "laptop" ];      # Which devices to share the folder with
-            versioning = {
-              type = "simple";
-              params = {
-                keep = "10";
-              };
-            };
-          };
-        };
-      };
-    };
-
+  services.xserver.excludePackages = [pkgs.xterm];
 
   # Enable gnome
   services.xserver.displayManager.gdm.enable = true;
@@ -77,7 +50,36 @@
       hitori # sudoku game
       atomix # puzzle game
       gnome-calendar
+      gnome-weather
     ]);
+
+  services.syncthing = {
+    enable = true;
+    user = "christopher";
+    dataDir = "/home/christopher/.data/syncthing";
+    configDir = "/home/christopher/.config/syncthing";
+    overrideDevices = true; # overrides any devices added or deleted through the WebUI
+    overrideFolders = true; # overrides any folders added or deleted through the WebUI
+    settings = {
+      devices = {
+        "fighting-falcon" = {id = "YJQVJ2A-MAB6VYC-NHNIQF5-I6WX5NX-V6URDYS-OKV2Q4J-UGTFIDG-N5WYJAB";};
+        "laptop" = {id = "FEIWANR-HOROKFN-JD3SRTM-QMZ3DS2-447O5VD-4VET64D-QRYSHJG-6DNN3QD";};
+      };
+      folders = {
+        "home-directory" = {
+          # Name of folder in Syncthing, also the folder ID
+          path = "/home/christopher"; # Which folder to add to Syncthing
+          devices = ["fighting-falcon" "laptop"]; # Which devices to share the folder with
+          versioning = {
+            type = "simple";
+            params = {
+              keep = "10";
+            };
+          };
+        };
+      };
+    };
+  };
 
   services.printing.enable = true;
 
@@ -103,7 +105,6 @@
     nano
   ];
   environment.shellAliases = {
-    #bottom = "btm";
     btm = "btm --mem_as_value";
   };
 
@@ -125,7 +126,7 @@
   };
   programs.fish.enable = true;
   environment.pathsToLink = ["/share/fish"];
-
+  programs.thunar.enable = false;
   programs.steam.enable = true;
 
   # enable auto upgrade
