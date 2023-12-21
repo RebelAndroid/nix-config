@@ -20,7 +20,6 @@
     scowl
     smartmontools
     starship
-    texlive.combined.scheme-full
     timer
   ];
 }

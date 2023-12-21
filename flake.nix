@@ -25,7 +25,7 @@
         ];
     };
   in {
-    homeConfigurations."christopher@fighting-falcon" = home-manager.lib.homeManagerConfiguration {
+    homeConfigurations."christopher@desktop" = home-manager.lib.homeManagerConfiguration {
       inherit pkgs;
       extraSpecialArgs = inputs;
       modules = [
@@ -58,14 +58,15 @@
         })
       ];
     };
-    nixosConfigurations.fighting-falcon = nixpkgs.lib.nixosSystem {
+    nixosConfigurations.desktop = nixpkgs.lib.nixosSystem {
       inherit pkgs;
       system = "x86_64-linux";
       modules = [
         ./configuration.nix
         ./hardware-configuration.nix
+        ./gnome.nix
         ({...}: {
-          networking.hostName = "fighting-falcon";
+          networking.hostName = "desktop";
         })
       ];
     };
@@ -76,6 +77,7 @@
       modules = [
         ./configuration.nix
         ./laptop-hardware-configuration.nix
+        ./gnome.nix
       ];
     };
   };

@@ -19,40 +19,6 @@
   services.xserver.enable = true;
   services.xserver.excludePackages = [pkgs.xterm];
 
-  # Enable gnome
-  services.xserver.displayManager.gdm.enable = true;
-  services.xserver.desktopManager.gnome.enable = true;
-
-  # enable autologin
-  services.xserver.displayManager.autoLogin.enable = true;
-  services.xserver.displayManager.autoLogin.user = "christopher";
-  # workaround to fix autologin
-  systemd.services."getty@tty1".enable = false;
-  systemd.services."autovt@tty1".enable = false;
-
-  environment.gnome.excludePackages =
-    (with pkgs; [
-      gnome-photos
-      gnome-tour
-    ])
-    ++ (with pkgs.gnome; [
-      cheese # webcam tool
-      gnome-music
-      gnome-terminal
-      gedit # text editor
-      epiphany # web browser
-      geary # email reader
-      #evince # document viewer
-      gnome-characters
-      totem # video player
-      tali # poker game
-      iagno # go game
-      hitori # sudoku game
-      atomix # puzzle game
-      gnome-calendar
-      gnome-weather
-    ]);
-
   services.syncthing = {
     enable = true;
     user = "christopher";
@@ -102,8 +68,12 @@
 
   environment.systemPackages = with pkgs; [
     git
-    nano
+    micro
   ];
+
+  programs.nano.enable = false;
+
+
   environment.shellAliases = {
     btm = "btm --mem_as_value";
   };
