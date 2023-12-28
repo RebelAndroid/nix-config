@@ -6,10 +6,6 @@ with lib.hm.gvariant; {
       index-recursive-directories = [];
     };
 
-    "org/gnome/Geary" = {
-      migrated-config = true;
-    };
-
     "org/gnome/calculator" = {
       accuracy = 9;
       angle-units = "degrees";
@@ -23,17 +19,6 @@ with lib.hm.gvariant; {
       target-currency = "";
       target-units = "radian";
       word-size = 64;
-    };
-
-    "org/gnome/calendar" = {
-      active-view = "month";
-      window-maximized = true;
-      window-size = mkTuple [768 600];
-    };
-
-    "org/gnome/control-center" = {
-      last-panel = "power";
-      window-state = mkTuple [980 640];
     };
 
     "org/gnome/desktop/a11y/applications" = {
@@ -59,23 +44,6 @@ with lib.hm.gvariant; {
       mag-factor = 2.0;
       scroll-at-edges = true;
       show-cross-hairs = false;
-    };
-
-    "org/gnome/desktop/app-folders" = {
-      folder-children = ["Utilities" "YaST"];
-    };
-
-    "org/gnome/desktop/app-folders/folders/Utilities" = {
-      apps = ["gnome-abrt.desktop" "gnome-system-log.desktop" "nm-connection-editor.desktop" "org.gnome.baobab.desktop" "org.gnome.Connections.desktop" "org.gnome.DejaDup.desktop" "org.gnome.Dictionary.desktop" "org.gnome.DiskUtility.desktop" "org.gnome.eog.desktop" "org.gnome.Evince.desktop" "org.gnome.FileRoller.desktop" "org.gnome.fonts.desktop" "org.gnome.seahorse.Application.desktop" "org.gnome.tweaks.desktop" "org.gnome.Usage.desktop" "vinagre.desktop"];
-      categories = ["X-GNOME-Utilities"];
-      name = "X-GNOME-Utilities.directory";
-      translate = true;
-    };
-
-    "org/gnome/desktop/app-folders/folders/YaST" = {
-      categories = ["X-SuSE-YaST"];
-      name = "suse-yast.directory";
-      translate = true;
     };
 
     "org/gnome/desktop/background" = {
@@ -167,29 +135,16 @@ with lib.hm.gvariant; {
     };
 
     "org/gnome/desktop/wm/keybindings" = {
-      switch-applications = [];
-      switch-applications-backward = [];
-      switch-to-workspace-left = ["<Super>q"];
-      switch-to-workspace-right = ["<Super>w"];
       switch-windows = ["<Alt>Tab"];
       switch-windows-backward = ["<Shift><Alt>Tab"];
+      show-screenshot-ui = [ "<Super>s" ];
+      switch-applications = [];
+      switch-applications-backward = [];
+      screenshot = [];
     };
 
     "org/gnome/desktop/wm/preferences" = {
       workspace-names = ["Workspace 1"];
-    };
-
-    "org/gnome/epiphany" = {
-      ask-for-default = false;
-    };
-
-    "org/gnome/epiphany/state" = {
-      is-maximized = false;
-      window-size = mkTuple [1024 768];
-    };
-
-    "org/gnome/evolution-data-server" = {
-      migrated = true;
     };
 
     "org/gnome/mutter" = {
@@ -208,17 +163,13 @@ with lib.hm.gvariant; {
       maximized = true;
     };
 
-    "org/gnome/photos" = {
-      window-maximized = true;
-    };
-
     "org/gnome/settings-daemon/plugins/color" = {
       night-light-enabled = false;
     };
 
     "org/gnome/shell" = {
-      disabled-extensions = ["apps-menu@gnome-shell-extensions.gcampax.github.com" "workspace-indicator@gnome-shell-extensions.gcampax.github.com"];
-      enabled-extensions = ["dash-to-panel@jderose9.github.com" "launch-new-instance@gnome-shell-extensions.gcampax.github.com" "just-perfection-desktop@just-perfection"];
+      disabled-extensions = [ "apps-menu@gnome-shell-extensions.gcampax.github.com" "workspace-indicator@gnome-shell-extensions.gcampax.github.com" "light-style@gnome-shell-extensions.gcampax.github.com" "drive-menu@gnome-shell-extensions.gcampax.github.com" ];
+      enabled-extensions = [ "dash-to-panel@jderose9.github.com" "launch-new-instance@gnome-shell-extensions.gcampax.github.com" "just-perfection-desktop@just-perfection" "caffeine@patapon.info" "auto-move-windows@gnome-shell-extensions.gcampax.github.com" ];
       favorite-apps = ["librewolf.desktop" "Alacritty.desktop" "org.gnome.Nautilus.desktop" "codium.desktop" "org.prismlauncher.PrismLauncher.desktop" "steam.desktop"];
       last-selected-power-profile = "power-saver";
       welcome-dialog-last-shown-version = "44.1";
@@ -226,6 +177,14 @@ with lib.hm.gvariant; {
 
     "org/gnome/shell/app-switcher" = {
       current-workspace-only = true;
+    };
+
+    "org/gnome/shell/extensions/auto-move-windows" = {
+      application-list = [ "org.keepassxc.KeePassXC.desktop:2" "vlc.desktop:2" ];
+    };
+
+    "org/gnome/shell/extensions/caffeine" = {
+      indicator-position-max = -1;
     };
 
     "org/gnome/shell/extensions/dash-to-panel" = {
