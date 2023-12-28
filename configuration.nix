@@ -99,23 +99,13 @@
   programs.thunar.enable = false;
   programs.steam.enable = true;
 
-  # enable auto upgrade
-  system.autoUpgrade = {
-    enable = true;
-    dates = "4:00";
-    flake = "~/nix";
-    flags = ["--update-input" "nixpkgs"];
-    allowReboot = true;
-  };
   nix.gc = {
     automatic = true;
     dates = "weekly";
-    options = "--delete-older-than 30d";
+    options = "--delete-older-than 14d";
   };
 
   security.apparmor.enable = true;
-
-  security.apparmor.packages = [pkgs.firefox];
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions

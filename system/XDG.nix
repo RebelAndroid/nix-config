@@ -3,6 +3,8 @@
     xdg-utils
   ];
 
+  xdg.enable = true;
+  xdg.configHome = "/home/christopher/.config";
   xdg.userDirs = {
     enable = true;
     desktop = /home/christopher/desktop;

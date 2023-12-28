@@ -25,24 +25,7 @@
         ];
     };
   in {
-    homeConfigurations."christopher@desktop" = home-manager.lib.homeManagerConfiguration {
-      inherit pkgs;
-      extraSpecialArgs = inputs;
-      modules = [
-        ./system/XDG.nix
-        ./applications/GUI
-        ./applications/CLI-TUI
-        ./dconf
-        ({...}: {
-          home.stateVersion = "22.11";
-          home.username = "christopher";
-          home.homeDirectory = "/home/christopher";
-          programs.direnv.enable = true;
-        })
-      ];
-    };
-
-    homeConfigurations."christopher@laptop" = home-manager.lib.homeManagerConfiguration {
+    homeConfigurations."christopher" = home-manager.lib.homeManagerConfiguration {
       inherit pkgs;
       extraSpecialArgs = inputs;
       modules = [
