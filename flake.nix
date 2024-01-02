@@ -41,6 +41,22 @@
         })
       ];
     };
+
+	homeConfigurations."admin" = home-manager.lib.homeManagerConfiguration {
+	      inherit pkgs;
+	      extraSpecialArgs = inputs;
+	      modules = [
+	        ./system/XDG.nix
+	        ./applications/CLI-TUI
+	        ({...}: {
+	          home.stateVersion = "22.11";
+	          home.username = "admin";
+	          home.homeDirectory = "/home/admin";
+	          programs.direnv.enable = true;
+	        })
+	      ];
+	    };
+    
     nixosConfigurations.desktop = nixpkgs.lib.nixosSystem {
       inherit pkgs;
       system = "x86_64-linux";
@@ -62,6 +78,18 @@
         ./laptop-hardware-configuration.nix
         ./gnome.nix
       ];
+    };
+    
+    nixosConfigurations.craptop = nixpkgs.lib.nixosSystem {
+		inherit pkgs;
+		system = "x86_64-linux";
+		modules = [
+			./server-configuration.nix
+			./craptop-hardware-configuration.nix
+			({...}: {
+				networking.hostName = "craptop";
+			})
+		];
     };
   };
 }
