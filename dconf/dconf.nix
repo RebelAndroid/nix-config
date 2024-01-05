@@ -169,7 +169,7 @@ with lib.hm.gvariant; {
 
     "org/gnome/shell" = {
       disabled-extensions = [ "apps-menu@gnome-shell-extensions.gcampax.github.com" "workspace-indicator@gnome-shell-extensions.gcampax.github.com" "light-style@gnome-shell-extensions.gcampax.github.com" "drive-menu@gnome-shell-extensions.gcampax.github.com" ];
-      enabled-extensions = [ "dash-to-panel@jderose9.github.com" "launch-new-instance@gnome-shell-extensions.gcampax.github.com" "just-perfection-desktop@just-perfection" "caffeine@patapon.info" "auto-move-windows@gnome-shell-extensions.gcampax.github.com" ];
+      enabled-extensions = [ "dash-to-panel@jderose9.github.com" "launch-new-instance@gnome-shell-extensions.gcampax.github.com" "just-perfection-desktop@just-perfection" "caffeine@patapon.info" "auto-move-windows@gnome-shell-extensions.gcampax.github.com" "advanced-alt-tab@G-dH.github.com"];
       favorite-apps = ["librewolf.desktop" "Alacritty.desktop" "org.gnome.Nautilus.desktop" "codium.desktop" "org.prismlauncher.PrismLauncher.desktop" "steam.desktop"];
       last-selected-power-profile = "power-saver";
       welcome-dialog-last-shown-version = "44.1";
@@ -276,6 +276,15 @@ with lib.hm.gvariant; {
       workspace = false;
       workspace-switcher-size = 0;
       workspaces-in-app-grid = false;
+    };
+
+    "org/gnome/shell/extensions/advanced-alt-tab-window-switcher" = {
+      hot-edge-position=0;
+      switcher-popup-monitor=3;
+      switcher-popup-position=2;
+      win-switcher-popup-icon-size=32;
+      win-switcher-popup-preview-size=128;
+      win-switcher-popup-sorting=2;
     };
 
     "org/gnome/shell/world-clocks" = {

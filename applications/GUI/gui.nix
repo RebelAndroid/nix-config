@@ -18,6 +18,7 @@
     gnomeExtensions.dash-to-panel
     gnomeExtensions.just-perfection
     gnomeExtensions.caffeine
+    gnomeExtensions.advanced-alttab-window-switcher
   ];
   xdg.configFile."alacritty/alacritty.yml".source = ./alacritty.yaml;
   xdg.configFile."fish/config.fish".source = ./config.fish;
