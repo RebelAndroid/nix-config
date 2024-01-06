@@ -21,5 +21,6 @@
     smartmontools
     starship
     timer
+    tree
   ];
 }
