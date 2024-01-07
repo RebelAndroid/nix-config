@@ -196,7 +196,8 @@ with lib.hm.gvariant; {
       animate-appicon-hover-animation-type = "SIMPLE";
       appicon-margin = 8;
       appicon-padding = 4;
-      available-monitors = [0];
+      available-monitors = [1 0];
+      primary-monitor = 1;
       desktop-line-custom-color = "rgb(191,64,64)";
       desktop-line-use-custom-color = false;
       dot-position = "BOTTOM";
@@ -228,7 +229,6 @@ with lib.hm.gvariant; {
       panel-sizes = ''
         {"0":48}
       '';
-      primary-monitor = 0;
       progress-show-count = true;
       scroll-panel-action = "SWITCH_WORKSPACE";
       shortcut = ["<Super>q"];
@@ -284,7 +284,7 @@ with lib.hm.gvariant; {
       switcher-popup-position=2;
       win-switcher-popup-icon-size=32;
       win-switcher-popup-preview-size=128;
-      win-switcher-popup-sorting=2;
+      win-switcher-popup-sorting=3;
     };
 
     "org/gnome/shell/world-clocks" = {

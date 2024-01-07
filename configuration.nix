@@ -68,7 +68,7 @@
   };
   programs.fish.enable = true;
   environment.pathsToLink = ["/share/fish"];
-  programs.thunar.enable = false;
+  programs.thunar.enable = lib.mkForce false;
   programs.steam.enable = true;
 
   nix.gc = {
