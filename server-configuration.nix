@@ -18,6 +18,9 @@
 
   services.tailscale.enable = true;
 
+  # prevent laptop from suspending when closed
+  # maybe put this in craptop-hardware-configuration?
+  services.logind.lidSwitch = "ignore";
 
   virtualisation.docker.enable = true;
 

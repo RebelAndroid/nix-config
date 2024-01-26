@@ -29,7 +29,6 @@
     dataDir = "/home/christopher/.data/syncthing";
     configDir = "/home/christopher/.config/syncthing";
   };
-  
 
   sound.enable = true;
   hardware.pulseaudio.enable = true;
