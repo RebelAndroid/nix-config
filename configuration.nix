@@ -23,6 +23,14 @@
 
   services.tailscale.enable = true;
 
+  services.syncthing = {
+    enable = true;
+    user = "christopher";
+    dataDir = "/home/christopher/.data/syncthing";
+    configDir = "/home/christopher/.config/syncthing";
+  };
+  
+
   sound.enable = true;
   hardware.pulseaudio.enable = true;
 

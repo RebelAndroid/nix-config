@@ -19,16 +19,21 @@
     gnomeExtensions.just-perfection
     gnomeExtensions.caffeine
     gnomeExtensions.advanced-alttab-window-switcher
+    gnomeExtensions.blur-my-shell
   ];
   xdg.configFile."alacritty/alacritty.yml".source = ./alacritty.yaml;
   xdg.configFile."fish/config.fish".source = ./config.fish;
   xdg.configFile."starship.toml".source = ./starship.toml;
 
   xdg.desktopEntries."element".name = "Element";
-  xdg.desktopEntries."element".exec = "firefox --new-instance app.element.io";
+  xdg.desktopEntries."element".exec = "firefox --new-window app.element.io";
   xdg.desktopEntries."element".icon = "element-logo.png";
-
   xdg.dataFile."icons/element-logo.png".source = ./element-logo.png;
+
+  xdg.desktopEntries."discord".name = "Discord";
+  xdg.desktopEntries."discord".exec = "firefox --new-window discord.com/app";
+  xdg.desktopEntries."discord".icon = "discord-logo.png";
+  xdg.dataFile."icons/discord-logo.png".source = ./discord-logo.png;
 
   programs.vscode = {
     package = pkgs.vscodium;
