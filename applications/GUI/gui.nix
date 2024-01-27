@@ -15,13 +15,14 @@
     vlc
     vscodium
     xournalpp
+
     gnomeExtensions.dash-to-panel
     gnomeExtensions.just-perfection
     gnomeExtensions.caffeine
     gnomeExtensions.advanced-alttab-window-switcher
-    gnomeExtensions.blur-my-shell
   ];
-  xdg.configFile."alacritty/alacritty.yml".source = ./alacritty.yaml;
+  
+  xdg.configFile."alacritty/alacritty.toml".source = ./alacritty.toml;
   xdg.configFile."fish/config.fish".source = ./config.fish;
   xdg.configFile."starship.toml".source = ./starship.toml;
 

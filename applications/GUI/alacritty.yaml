@@ -1,28 +1,30 @@
-colors:
-  primary:
-    background: '#191919'
-    foreground: '#eeeeee'
-  cursor:
-    text: '#191919'
-    cursor: '#eeeeee'
-  normal:
-    black: '#4e4e4e'
-    red: '#ff6c60'
-    green: '#a8ff60'
-    yellow: '#ffffb6'
-    blue: '#96cbfe'
-    magenta: '#ff73fd'
-    cyan: '#c6c5fe'
-    white: '#eeeeee'
-  bright:
-    black: '#7c7c7c'
-    red: '#ffb6b0'
-    green: '#ceffab'
-    yellow: '#ffffcb'
-    blue: '#b5dcfe'
-    magenta: '#ff9cfe'
-    cyan: '#dfdffe'
-    white: '#ffffff'
-font:
-  normal:
-    family: JetBrains Mono NL
+[colors.bright]
+black = "#7c7c7c"
+blue = "#b5dcfe"
+cyan = "#dfdffe"
+green = "#ceffab"
+magenta = "#ff9cfe"
+red = "#ffb6b0"
+white = "#ffffff"
+yellow = "#ffffcb"
+
+[colors.cursor]
+cursor = "#eeeeee"
+text = "#191919"
+
+[colors.normal]
+black = "#4e4e4e"
+blue = "#96cbfe"
+cyan = "#c6c5fe"
+green = "#a8ff60"
+magenta = "#ff73fd"
+red = "#ff6c60"
+white = "#eeeeee"
+yellow = "#ffffb6"
+
+[colors.primary]
+background = "#191919"
+foreground = "#eeeeee"
+
+[font.normal]
+family = "JetBrains Mono NL"
