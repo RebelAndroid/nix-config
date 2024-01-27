@@ -52,7 +52,6 @@
 
   programs.nano.enable = false;
 
-
   environment.shellAliases = {
     btm = "btm --mem_as_value";
   };
