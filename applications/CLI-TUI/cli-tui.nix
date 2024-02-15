@@ -22,5 +22,6 @@
     starship
     timer
     tree
+    zoxide
   ];
 }
