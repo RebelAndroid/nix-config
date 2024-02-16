@@ -14,5 +14,6 @@
     starship       # shell prompt
     timer          # timer
     tree           # displays file trees
+    zoxide         # cd replacement
   ];
 }

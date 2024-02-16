@@ -76,7 +76,8 @@
       modules = [
         ./configuration.nix
         ./laptop-hardware-configuration.nix
-        ./gnome.nix
+        # ./gnome.nix
+        ./kde.nix
       ];
     };
 

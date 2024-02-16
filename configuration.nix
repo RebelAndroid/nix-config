@@ -54,6 +54,7 @@
 
   environment.shellAliases = {
     btm = "btm --mem_as_value";
+    z = "zoxide";
   };
 
   nix.extraOptions = ''
