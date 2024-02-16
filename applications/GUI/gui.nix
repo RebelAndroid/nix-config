@@ -1,20 +1,22 @@
 {pkgs, ...}: {
   home.packages = with pkgs; [
-    alacritty
-    cubiomes-viewer
-    firefox
-    galculator
-    gimp
-    inkscape
-    keepassxc
-    krita
-    libreoffice
-    librewolf
-    onlyoffice-bin
-    prismlauncher
-    vlc
-    vscodium
-    xournalpp
+    alacritty     # terminal
+    firefox       # web browser
+    gimp          # image editor
+    inkscape      # vector art
+    keepassxc     # password manager
+    krita         # raster art
+    libreoffice   # office suite
+    librewolf     # web browser
+    prismlauncher # minecraft launcher
+    vlc           # media player
+    vscodium      # code editor
+    xournalpp     # document writing program
+
+    # typesetting system
+    typst         
+    typst-lsp
+    typstfmt
 
     gnomeExtensions.dash-to-panel
     gnomeExtensions.just-perfection
@@ -43,6 +45,9 @@
       jnoortheen.nix-ide
       ms-python.python
       llvm-vs-code-extensions.vscode-clangd
+      mgt19937.typst-preview
+      nvarner.typst-lsp
+      tomoki1207.pdf
     ];
     enable = true;
   };

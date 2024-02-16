@@ -13,6 +13,7 @@
             include <abstractions/base>
             include <abstractions/gtk>
             include <abstractions/dconf>
+            include <abstractions/icons>
             # nix store
             /nix/store/** rm,
 
@@ -20,19 +21,11 @@
             /home/christopher/.config/galculator/galculator.conf rw,
 
             owner @{run}/user/*/dconf/user rw,
-
-            # icons
-            /home/christopher/.local/share/icons r,
-            /home/christopher/.local/share/icons/hicolor/16x16/apps/ r,
-            /home/christopher/.local/share/icons/hicolor/24x24/apps/ r,
-            /home/christopher/.local/share/icons/hicolor/32x32/apps/ r,
-            /home/christopher/.local/share/icons/hicolor/48x48/apps/ r,
-            /home/christopher/.local/share/icons/hicolor/256x256/apps/ r,
           }'';
   };
 
   security.apparmor.policies."bin.firefox" = {
-    enable = true;
+    enable = false;
     enforce = false;
     profile = ''      /nix/store/**/bin/firefox {
             # run bin/firefox with this profile
@@ -57,6 +50,50 @@
 
           }'';
   };
+
+  security.apparmor.policies."bin.vlc" = {
+    enable = true;
+    enforce = false;
+
+    profile = ''  
+    include <tunables/global>
+    /nix/store/**/bin/vlc {
+      include <abstractions/icons>
+
+      ${pkgs.vlc}/bin/.vlc-wrapped ix,
+      /nix/store/** rm,
+
+      /dev/urandom r,
+
+      # access and edit list of recently watched media
+      owner @{HOME}/.local/share/recently-used.xbel rw,
+
+      # from app armor gitlab repository (apparmor/profiles/apparmor.d/abstraction/qt5-settings-write)
+      owner @{HOME}/.config/#[0-9]*[0-9] rw,
+      owner @{HOME}/.config/QtProject.conf rwl -> @{HOME}/.config/#[0-9]*[0-9],
+      # for temporary files like QtProject.conf.Aqrgeb
+      owner @{HOME}/.config/QtProject.conf.?????? rwl -> @{HOME}/.config/#[0-9]*[0-9],
+      owner @{HOME}/.config/QtProject.conf.lock rwk,
+
+      # vlc files
+      owner @{HOME}/.config/vlc/** rw,
+      owner @{HOME}/.local/share/vlc/** rw,
+
+      owner @{HOME}/.local/share/mime/mime.cache r,
+
+      owner @{HOME}/.cache/mesa_shader_cache/** r,
+
+      owner /**/*.webm r,
+
+      # allow vlc to send and receive signals from itself
+      signal (send, receive) peer=@{profile_name},
+    }'';
+  };
+
+  security.apparmor.includes."abstractions/icons" = ''
+    owner @{HOME}/.local/share/icons/ r,
+    owner @{HOME}/.local/share/icons/hicolor/{16,24,32,48,256}x{16,24,32,48,256}/apps/ r,
+  '';
 
   security.apparmor.includes."abstractions/gtk" = ''
     /usr/share/themes/{,**} r,
