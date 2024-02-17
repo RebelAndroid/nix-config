@@ -169,7 +169,7 @@ with lib.hm.gvariant; {
 
     "org/gnome/shell" = {
       disabled-extensions = ["apps-menu@gnome-shell-extensions.gcampax.github.com" "workspace-indicator@gnome-shell-extensions.gcampax.github.com" "light-style@gnome-shell-extensions.gcampax.github.com" "drive-menu@gnome-shell-extensions.gcampax.github.com"];
-      enabled-extensions = ["dash-to-panel@jderose9.github.com" "launch-new-instance@gnome-shell-extensions.gcampax.github.com" "just-perfection-desktop@just-perfection" "caffeine@patapon.info" "auto-move-windows@gnome-shell-extensions.gcampax.github.com" "advanced-alt-tab@G-dH.github.com"];
+      enabled-extensions = ["dash-to-panel@jderose9.github.com" "launch-new-instance@gnome-shell-extensions.gcampax.github.com" "just-perfection-desktop@just-perfection" "caffeine@patapon.info" "advanced-alt-tab@G-dH.github.com"];
       favorite-apps = ["librewolf.desktop" "Alacritty.desktop" "org.gnome.Nautilus.desktop" "codium.desktop" "org.prismlauncher.PrismLauncher.desktop" "steam.desktop"];
       last-selected-power-profile = "power-saver";
       welcome-dialog-last-shown-version = "44.1";
@@ -177,10 +177,6 @@ with lib.hm.gvariant; {
 
     "org/gnome/shell/app-switcher" = {
       current-workspace-only = true;
-    };
-
-    "org/gnome/shell/extensions/auto-move-windows" = {
-      application-list = ["org.keepassxc.KeePassXC.desktop:2" "vlc.desktop:2"];
     };
 
     "org/gnome/shell/extensions/caffeine" = {
