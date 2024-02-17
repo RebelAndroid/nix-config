@@ -64,6 +64,7 @@
         ./configuration.nix
         ./hardware-configuration.nix
         ./gnome.nix
+        ./smart-log.nix
         ({...}: {
           networking.hostName = "desktop";
         })

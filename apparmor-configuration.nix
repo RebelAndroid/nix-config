@@ -27,67 +27,68 @@
   security.apparmor.policies."bin.firefox" = {
     enable = false;
     enforce = false;
-    profile = ''      /nix/store/**/bin/firefox {
-            # run bin/firefox with this profile
-            ${pkgs.firefox}/bin/firefox ix,
-            ${pkgs.firefox}/lib/firefox/firefox ix,
-            #
-            ${pkgs.firefox}/** rm,
-            #glibc and locales
-            /nix/store/** rm,
+    profile = ''      
+      /nix/store/**/bin/firefox {
+              # run bin/firefox with this profile
+              ${pkgs.firefox}/bin/firefox ix,
+              ${pkgs.firefox}/lib/firefox/firefox ix,
+              #
+              ${pkgs.firefox}/** rm,
+              #glibc and locales
+              /nix/store/** rm,
 
-            # terminal files
-            /dev/tty rw,
-            /dev/pts/0 rw,
+              # terminal files
+              /dev/tty rw,
+              /dev/pts/0 rw,
 
-            /dev/null w,
+              /dev/null w,
 
-            # list of filesystems supported by kernel
-            /proc/filesystems r,
+              # list of filesystems supported by kernel
+              /proc/filesystems r,
 
-            # cpu info
-            /proc/cpuinfo r,
+              # cpu info
+              /proc/cpuinfo r,
 
-          }'';
+            }'';
   };
 
   security.apparmor.policies."bin.vlc" = {
     enable = true;
     enforce = false;
 
-    profile = ''  
-    include <tunables/global>
-    /nix/store/**/bin/vlc {
-      include <abstractions/icons>
+    profile = ''        
+      include <tunables/global>
+      /nix/store/**/bin/vlc {
+        include <abstractions/icons>
 
-      ${pkgs.vlc}/bin/.vlc-wrapped ix,
-      /nix/store/** rm,
+        ${pkgs.vlc}/bin/.vlc-wrapped ix,
+        /nix/store/** rm,
 
-      /dev/urandom r,
+        /dev/urandom r,
 
-      # access and edit list of recently watched media
-      owner @{HOME}/.local/share/recently-used.xbel rw,
+        # access and edit list of recently watched media
+        owner @{HOME}/.local/share/recently-used.xbel rw,
 
-      # from app armor gitlab repository (apparmor/profiles/apparmor.d/abstraction/qt5-settings-write)
-      owner @{HOME}/.config/#[0-9]*[0-9] rw,
-      owner @{HOME}/.config/QtProject.conf rwl -> @{HOME}/.config/#[0-9]*[0-9],
-      # for temporary files like QtProject.conf.Aqrgeb
-      owner @{HOME}/.config/QtProject.conf.?????? rwl -> @{HOME}/.config/#[0-9]*[0-9],
-      owner @{HOME}/.config/QtProject.conf.lock rwk,
+        # from app armor gitlab repository (apparmor/profiles/apparmor.d/abstraction/qt5-settings-write)
+        owner @{HOME}/.config/#[0-9]*[0-9] rw,
+        owner @{HOME}/.config/QtProject.conf rwl -> @{HOME}/.config/#[0-9]*[0-9],
+        # for temporary files like QtProject.conf.Aqrgeb
+        owner @{HOME}/.config/QtProject.conf.?????? rwl -> @{HOME}/.config/#[0-9]*[0-9],
+        owner @{HOME}/.config/QtProject.conf.lock rwk,
 
-      # vlc files
-      owner @{HOME}/.config/vlc/** rw,
-      owner @{HOME}/.local/share/vlc/** rw,
+        # vlc files
+        owner @{HOME}/.config/vlc/** rw,
+        owner @{HOME}/.local/share/vlc/** rw,
 
-      owner @{HOME}/.local/share/mime/mime.cache r,
+        owner @{HOME}/.local/share/mime/mime.cache r,
 
-      owner @{HOME}/.cache/mesa_shader_cache/** r,
+        owner @{HOME}/.cache/mesa_shader_cache/** r,
 
-      owner /**/*.webm r,
+        owner /**/*.webm r,
 
-      # allow vlc to send and receive signals from itself
-      signal (send, receive) peer=@{profile_name},
-    }'';
+        # allow vlc to send and receive signals from itself
+        signal (send, receive) peer=@{profile_name},
+      }'';
   };
 
   security.apparmor.includes."abstractions/icons" = ''

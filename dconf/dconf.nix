@@ -266,7 +266,7 @@ with lib.hm.gvariant; {
       search = false;
       show-apps-button = false;
       startup-status = 0;
-      double-super-to-appgrid=false;
+      double-super-to-appgrid = false;
       theme = true;
       window-demands-attention-focus = true;
       window-picker-icon = false;

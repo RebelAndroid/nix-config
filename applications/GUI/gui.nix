@@ -1,20 +1,20 @@
 {pkgs, ...}: {
   home.packages = with pkgs; [
-    alacritty     # terminal
-    firefox       # web browser
-    gimp          # image editor
-    inkscape      # vector art
-    keepassxc     # password manager
-    krita         # raster art
-    libreoffice   # office suite
-    librewolf     # web browser
+    alacritty # terminal
+    firefox # web browser
+    gimp # image editor
+    inkscape # vector art
+    keepassxc # password manager
+    krita # raster art
+    libreoffice # office suite
+    librewolf # web browser
     prismlauncher # minecraft launcher
-    vlc           # media player
-    vscodium      # code editor
-    xournalpp     # document writing program
+    vlc # media player
+    vscodium # code editor
+    xournalpp # document writing program
 
     # typesetting system
-    typst         
+    typst
     typst-lsp
     typstfmt
 
@@ -23,7 +23,7 @@
     gnomeExtensions.caffeine
     gnomeExtensions.advanced-alttab-window-switcher
   ];
-  
+
   xdg.configFile."alacritty/alacritty.toml".source = ./alacritty.toml;
   xdg.configFile."fish/config.fish".source = ./config.fish;
   xdg.configFile."starship.toml".source = ./starship.toml;
