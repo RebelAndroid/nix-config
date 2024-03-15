@@ -49,15 +49,10 @@ with lib.hm.gvariant; {
     "org/gnome/desktop/background" = {
       color-shading-type = "solid";
       picture-options = "zoom";
-      picture-uri = "file:///run/current-system/sw/share/backgrounds/gnome/blobs-l.svg";
-      picture-uri-dark = "file:///run/current-system/sw/share/backgrounds/gnome/blobs-d.svg";
+      picture-uri = "file:///home/christopher/.local/share/backgrounds/2024-03-15-13-19-15-unova-map-large.jpg";
+      picture-uri-dark = "file:///home/christopher/.local/share/backgrounds/2024-03-15-13-19-15-unova-map-large.jpg";
       primary-color = "#3071AE";
       secondary-color = "#000000";
-    };
-
-    "org/gnome/desktop/input-sources" = {
-      sources = [(mkTuple ["xkb" "us"])];
-      xkb-options = ["terminate:ctrl_alt_bksp"];
     };
 
     "org/gnome/desktop/interface" = {
@@ -69,12 +64,6 @@ with lib.hm.gvariant; {
       overlay-scrolling = true;
       show-battery-percentage = true;
       toolkit-accessibility = false;
-    };
-
-    "org/gnome/desktop/media-handling" = {
-      autorun-x-content-ignore = [];
-      autorun-x-content-open-folder = [];
-      autorun-x-content-start-app = ["x-content/ostree-repository"];
     };
 
     "org/gnome/desktop/notifications" = {
