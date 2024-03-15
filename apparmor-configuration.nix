@@ -27,7 +27,7 @@
   security.apparmor.policies."bin.firefox" = {
     enable = false;
     enforce = false;
-    profile = ''        
+    profile = ''          
       /nix/store/**/bin/firefox {
               # run bin/firefox with this profile
               ${pkgs.firefox}/bin/firefox ix,
@@ -56,7 +56,7 @@
     enable = true;
     enforce = false;
 
-    profile = ''          
+    profile = ''      
       include <tunables/global>
       /nix/store/**/bin/vlc {
         include <abstractions/icons>
