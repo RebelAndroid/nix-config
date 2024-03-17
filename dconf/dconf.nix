@@ -114,9 +114,9 @@ with lib.hm.gvariant; {
     };
 
     "org/gnome/desktop/search-providers" = {
-      disable-external = false;
-      disabled = [];
-      sort-order = ["org.gnome.Contacts.desktop" "org.gnome.Documents.desktop" "org.gnome.Nautilus.desktop"];
+      disable-external=false;
+      disabled = ["org.gnome.Contacts.desktop" "org.gnome.Nautilus.desktop" "org.gnome.Calculator.desktop" "org.gnome.clocks.desktop" "org.gnome.seahorse.Application.desktop" "org.gnome.Software.desktop" "org.gnome.Settings.desktop"];
+      sort-order=["org.gnome.Contacts.desktop" "org.gnome.Documents.desktop" "org.gnome.Nautilus.desktop"];
     };
 
     "org/gnome/desktop/session" = {
@@ -158,7 +158,7 @@ with lib.hm.gvariant; {
 
     "org/gnome/shell" = {
       disabled-extensions = ["apps-menu@gnome-shell-extensions.gcampax.github.com" "workspace-indicator@gnome-shell-extensions.gcampax.github.com" "light-style@gnome-shell-extensions.gcampax.github.com" "drive-menu@gnome-shell-extensions.gcampax.github.com"];
-      enabled-extensions = ["dash-to-panel@jderose9.github.com" "launch-new-instance@gnome-shell-extensions.gcampax.github.com" "just-perfection-desktop@just-perfection" "caffeine@patapon.info" "advanced-alt-tab@G-dH.github.com"];
+      enabled-extensions = ["dash-to-panel@jderose9.github.com" "launch-new-instance@gnome-shell-extensions.gcampax.github.com" "just-perfection-desktop@just-perfection" "caffeine@patapon.info" "advanced-alt-tab@G-dH.github.com" "blur-my-shell@aunetx"];
       favorite-apps = ["librewolf.desktop" "Alacritty.desktop" "org.gnome.Nautilus.desktop" "codium.desktop" "org.prismlauncher.PrismLauncher.desktop" "steam.desktop"];
       last-selected-power-profile = "power-saver";
       welcome-dialog-last-shown-version = "44.1";
@@ -271,6 +271,23 @@ with lib.hm.gvariant; {
       win-switcher-popup-icon-size = 32;
       win-switcher-popup-preview-size = 128;
       win-switcher-popup-sorting = 3;
+    };
+
+    "org/gnome/shell/extensions/blur-my-shell/applications" = {
+      blur=false;
+    };
+
+    "org/gnome/shell/extensions/blur-my-shell/panel" = {
+      blur=false;
+      style-panel=0;
+    };
+
+    "org/gnome/shell/extensions/blur-my-shell/screenshot" = {
+      blur=true;
+    };
+
+    "org/gnome/shell/extensions/blur-my-shell/window-list" = {
+      blur=false;
     };
 
     "org/gnome/shell/world-clocks" = {
