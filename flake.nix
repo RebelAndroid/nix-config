@@ -32,7 +32,8 @@
         ./system/XDG.nix
         ./applications/GUI
         ./applications/CLI-TUI
-        ./dconf
+        # ./dconf
+        ./sway.nix
         ({...}: {
           home.stateVersion = "22.11";
           home.username = "christopher";
@@ -63,10 +64,18 @@
       modules = [
         ./configuration.nix
         ./hardware-configuration.nix
-        ./gnome.nix
+        # ./gnome.nix
         ./smart-log.nix
         ({...}: {
           networking.hostName = "desktop";
+          security.polkit.enable = true;
+          # systemd.user.services.kanshi = {
+          #   description = "kanshi daemon";
+          #   serviceConfig = {
+          #     Type = "simple";
+          #     ExecStart = ''${pkgs.kanshi}/bin/kanshi -c kanshi_config_file'';
+          #   };
+          # };
         })
       ];
     };
