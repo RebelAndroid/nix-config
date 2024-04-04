@@ -17,6 +17,7 @@
     starship # shell prompt
     timer # timer
     tldr # man replacement
+    tmsu # tag file system
     tree # displays file trees
     zoxide # cd replacement
   ];
