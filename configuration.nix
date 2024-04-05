@@ -14,10 +14,10 @@
 
   networking.networkmanager.enable = true;
 
-  services.xserver.enable = true;
-  services.xserver.excludePackages = [pkgs.xterm];
-  # Enable touchpad support
-  services.xserver.libinput.enable = true;
+  # services.xserver.enable = true;
+  # services.xserver.excludePackages = [pkgs.xterm];
+  # # Enable touchpad support
+  # services.xserver.libinput.enable = true;
 
   services.printing.enable = true;
 
