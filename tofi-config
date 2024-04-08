@@ -1,0 +1,105 @@
+# Default config for tofi
+#
+# Copy this file to ~/.config/tofi/config and get customising!
+#
+# A complete reference of available options can be found in `man 5 tofi`.
+
+#
+### Fonts
+#
+	font = "Sans"
+
+	# Point size of text.
+	font-size = 24
+
+	hint-font = true
+
+#
+### Text theming
+#
+	# Default text color
+	# All text defaults to this color if not otherwise specified.
+	text-color = #FFFFFF
+
+	# oklch(67.06% 0.175, 50)
+	selection-color = #6c12a8
+
+#
+### Text cursor theme
+#
+	text-cursor = true
+	text-cursor-style = bar
+	text-cursor-color = #FFFFFF
+	text-cursor-thickness = 2
+
+#
+### Text layout
+#
+	prompt-text = "Run: "
+	num-results = 0
+
+#
+### Window theming
+#
+	width = 100%
+    height = 100%
+    border-width = 0
+    outline-width = 0
+    padding-left = 35%
+    padding-top = 35%
+    result-spacing = 25
+    num-results = 5
+    background-color = #000A
+
+	# Whether to scale the window by the output's scale factor.
+	scale = true
+
+#
+### Window positioning
+#
+	# The name of the output to appear on. An empty string will use the
+	# default output chosen by the compositor.
+	output = ""
+
+	anchor = center
+
+	exclusive-zone = -1
+
+	margin-top = 0
+	margin-bottom = 0
+	margin-left = 0
+	margin-right = 0
+
+#
+### Behaviour
+#
+	# Hide the mouse cursor.
+	hide-cursor = false
+
+	# Sort results by number of usages in run and drun modes.
+	history = true
+
+	fuzzy-match=true
+
+	# If true, automatically accept a result if it is the only one
+	# remaining. If there's only one result on startup, window creation is
+	# skipped altogether.
+	auto-accept-single = false
+
+	hide-input = false
+	hidden-character = "*"
+
+	print-index = false
+
+    # directly launches executables, ignoring XDG desktop entry, will break things
+	drun-launch = false
+
+	# Defaults to the value of the TERMINAL environment variable.
+	# terminal = alacritty
+
+	late-keyboard-init = false
+
+	multi-instance = false
+
+	# I'm not using any non-ascii program names
+	ascii-input = true

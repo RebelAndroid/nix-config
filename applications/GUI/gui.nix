@@ -18,11 +18,7 @@
     typst-lsp
     typstfmt
 
-    # gnomeExtensions.dash-to-panel
-    # gnomeExtensions.just-perfection
-    # gnomeExtensions.caffeine
-    # gnomeExtensions.advanced-alttab-window-switcher
-    # gnomeExtensions.blur-my-shell
+    tofi # launcher for sway
   ];
 
   xdg.configFile."alacritty/alacritty.toml".source = ./alacritty.toml;
