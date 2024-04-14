@@ -8,6 +8,7 @@
     krita # raster art
     libreoffice # office suite
     librewolf # web browser
+    obsidian # note taking software
     prismlauncher # minecraft launcher
     vlc # media player
     vscodium # code editor

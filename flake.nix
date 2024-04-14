@@ -22,6 +22,7 @@
           "steam-original"
           "steam-runtime"
           "steam-run"
+          "obsidian"
         ];
     };
   in {

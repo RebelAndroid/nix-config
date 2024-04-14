@@ -21,8 +21,7 @@
 	# All text defaults to this color if not otherwise specified.
 	text-color = #FFFFFF
 
-	# oklch(67.06% 0.175, 50)
-	selection-color = #6c12a8
+	selection-color = #870cd2
 
 #
 ### Text cursor theme
@@ -94,8 +93,6 @@
     # directly launches executables, ignoring XDG desktop entry, will break things
 	drun-launch = false
 
-	# Defaults to the value of the TERMINAL environment variable.
-	# terminal = alacritty
 
 	late-keyboard-init = false
 
