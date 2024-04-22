@@ -36,6 +36,9 @@
   xdg.desktopEntries."discord".icon = "discord-logo.png";
   xdg.dataFile."icons/discord-logo.png".source = ./discord-logo.png;
 
+  xdg.desktopEntries."obsidian".name = "Obsidian";
+  xdg.desktopEntries."obsidian".exec = "obsidian";
+
   programs.vscode = {
     package = pkgs.vscodium;
     extensions = with pkgs.vscode-extensions; [

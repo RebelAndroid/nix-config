@@ -15,10 +15,15 @@ set $menu tofi-drun | xargs swaymsg exec --
 ### Output configuration
 output HDMI-A-1 pos 0 0 res 1920x1080@100Hz
 output DP-2 pos 1920 0 res 1920x1080@74.986Hz
+# both of my monitors have freesync
+output * adaptive_sync on
 
 output * bg ~/.config/unova-map-background.png fill
 
 focus output HDMI-A-1
+
+# lock Wacom tablet to primary monitor
+input 1386:886:Wacom_Intuos_BT_S_Pen map_to_output HDMI-A-1
 
 ### Key bindings
 # Start a terminal
@@ -152,7 +157,7 @@ bar {
 
     # When the status_command prints a new line to stdout, swaybar updates.
     # The default just shows the current date and time.
-    status_command while date +'%Y-%m-%d %X'; do sleep 1; done
+    status_command while /home/christopher/.config/sway/sway-bar-script.sh; do sleep 1; done
 
     colors {
         statusline #ffffff

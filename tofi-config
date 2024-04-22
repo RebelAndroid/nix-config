@@ -93,7 +93,6 @@
     # directly launches executables, ignoring XDG desktop entry, will break things
 	drun-launch = false
 
-
 	late-keyboard-init = false
 
 	multi-instance = false

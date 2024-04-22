@@ -4,20 +4,13 @@
   lib,
   ...
 }: {
-  imports = [
-    ./apparmor-configuration.nix
-  ];
+  imports = [];
 
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
   networking.networkmanager.enable = true;
-
-  # services.xserver.enable = true;
-  # services.xserver.excludePackages = [pkgs.xterm];
-  # # Enable touchpad support
-  # services.xserver.libinput.enable = true;
 
   services.printing.enable = true;
 
@@ -28,24 +21,26 @@
 
   virtualisation.docker.enable = true;
 
-  services.syncthing = {
-    enable = true;
-    user = "christopher";
-    dataDir = "/home/christopher/.data/syncthing";
-    configDir = "/home/christopher/.config/syncthing";
-  };
+  # services.syncthing = {
+  #   enable = true;
+  #   user = "christopher";
+  #   dataDir = "/home/christopher/.data/syncthing";
+  #   configDir = "/home/christopher/.config/syncthing";
+  # };
 
   time.timeZone = "America/New_York";
 
   environment.systemPackages = with pkgs; [
     git
     micro
+    gnome.adwaita-icon-theme # needed for Xournal++ (and probably other applications)
   ];
   programs.nano.enable = false;
 
   environment.shellAliases = {
     btm = "btm --mem_as_value";
     z = "zoxide";
+    ls = "eza -l";
   };
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
@@ -72,9 +67,8 @@
 
   fonts.packages = with pkgs; [
     jetbrains-mono
+    noto-fonts
   ];
-
-  security.apparmor.enable = true;
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
