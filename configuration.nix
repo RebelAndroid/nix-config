@@ -68,6 +68,7 @@
   fonts.packages = with pkgs; [
     jetbrains-mono
     noto-fonts
+    liberation_ttf
   ];
 
   # This value determines the NixOS release from which the default

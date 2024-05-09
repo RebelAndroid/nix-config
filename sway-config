@@ -9,8 +9,8 @@ set $up k
 set $right l
 
 set $term alacritty
-
 set $menu tofi-drun | xargs swaymsg exec --
+set $screenshot shotman --capture region
 
 ### Output configuration
 output HDMI-A-1 pos 0 0 res 1920x1080@100Hz
@@ -34,6 +34,8 @@ bindsym $mod+q kill
 
 # Start your launcher
 bindsym --release Super_L  exec $menu
+
+bindsym $mod+s exec $screenshot
 
 # Drag floating windows by holding down $mod and left mouse button.
 # Resize them with right mouse button + $mod.
@@ -92,9 +94,9 @@ bindsym $mod+Shift+0 move container to workspace number 10
     bindsym $mod+v splitv
 
     # Switch the current container between different layout styles
-    bindsym $mod+s layout stacking
-    bindsym $mod+w layout tabbed
-    bindsym $mod+e layout toggle split
+    # bindsym $mod+s layout stacking
+    # bindsym $mod+w layout tabbed
+    # bindsym $mod+e layout toggle split
 
     # Make the current focus fullscreen
     bindsym $mod+f fullscreen
