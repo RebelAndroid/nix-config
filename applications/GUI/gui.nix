@@ -3,14 +3,15 @@
     alacritty # terminal
     firefox # web browser
     gimp # image editor
+    imv # image viewer
     inkscape # vector art
     keepassxc # password manager
     krita # raster art
     libreoffice # office suite
     librewolf # web browser
+    mpv # video player
     obsidian # note taking software
     prismlauncher # minecraft launcher
-    vlc # media player
     vscodium # code editor
     xournalpp # document writing program
 
