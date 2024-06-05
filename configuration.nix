@@ -41,6 +41,7 @@
     btm = "btm --mem_as_value";
     z = "zoxide";
     ls = "eza -l";
+    mv = "mv -i";
   };
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
