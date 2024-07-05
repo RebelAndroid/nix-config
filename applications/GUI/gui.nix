@@ -50,6 +50,7 @@
       mgt19937.typst-preview
       nvarner.typst-lsp
       tomoki1207.pdf
+      vue.volar
     ];
     enable = true;
   };

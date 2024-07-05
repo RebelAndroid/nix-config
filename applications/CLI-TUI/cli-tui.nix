@@ -1,12 +1,13 @@
 {pkgs, ...}: {
   home.packages = with pkgs; [
     alejandra # nix formatter
-    bat # cat replacement
+    backdown # deduplicator
     bottom # resource monitor
     docker # containerization system
     du-dust # disk usage monitor
     eza # ls replacement
     file # file type analyzer
+    fzf # fuzzy finder
     gh # github cli
     jdk17 # java development kit
     lm_sensors # get hardware info from sensors
