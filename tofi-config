@@ -93,3 +93,6 @@
 
 	# I'm not using any non-ascii program names
 	ascii-input = true
+
+	# run terminal commands in alacritty
+	terminal = "alacritty -e"

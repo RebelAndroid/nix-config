@@ -24,4 +24,8 @@
     tree # displays file trees
     zoxide # cd replacement
   ];
+
+  xdg.desktopEntries."btm".name = "btm";
+  xdg.desktopEntries."btm".exec = "btm";
+  xdg.desktopEntries."btm".terminal = true;
 }
