@@ -11,10 +11,11 @@
     gh # github cli
     jdk17 # java development kit
     lm_sensors # get hardware info from sensors
-    neofetch # tool for generating screenshots to post online
+    fastfetch # tool for generating screenshots to post online
     nil # nix language server
     nmon # resource monitor
     pstree # displays running processes in a tree
+    restic # backup tool
     shotman # screenshot tool
     smartmontools # get information about drives
     starship # shell prompt

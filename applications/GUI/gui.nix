@@ -47,7 +47,6 @@
       jnoortheen.nix-ide
       ms-python.python
       llvm-vs-code-extensions.vscode-clangd
-      mgt19937.typst-preview
       nvarner.typst-lsp
       tomoki1207.pdf
       vue.volar

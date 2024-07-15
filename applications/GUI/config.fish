@@ -4,3 +4,5 @@ set TTY1 (tty)
 
 starship init fish | source
 zoxide init fish | source
+
+export RESTIC_REPOSITORY="/hard_drive/restic-repo"
