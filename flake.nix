@@ -34,6 +34,7 @@
         ./applications/GUI
         ./applications/CLI-TUI
         ./sway.nix
+        ./gammastep.nix
         ({...}: {
           home.stateVersion = "22.11";
           home.username = "christopher";

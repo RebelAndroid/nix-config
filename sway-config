@@ -171,4 +171,6 @@ bar {
     }
 }
 
+exec gammastep
+
 include @sysconfdir@/sway/config.d/*

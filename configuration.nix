@@ -20,19 +20,12 @@
 
   virtualisation.docker.enable = true;
 
-  # services.syncthing = {
-  #   enable = true;
-  #   user = "christopher";
-  #   dataDir = "/home/christopher/.data/syncthing";
-  #   configDir = "/home/christopher/.config/syncthing";
-  # };
-
   time.timeZone = "America/New_York";
 
   environment.systemPackages = with pkgs; [
     git
     micro
-    gnome.adwaita-icon-theme # needed for Xournal++ (and probably other applications)
+    adwaita-icon-theme # needed for Xournal++ (and probably other applications)
   ];
   programs.nano.enable = false;
 
