@@ -17,7 +17,7 @@
     pstree # displays running processes in a tree
     restic # backup tool
     shotman # screenshot tool
-    smartmontools # get information about drives
+
     starship # shell prompt
     timer # timer
     tldr # man replacement

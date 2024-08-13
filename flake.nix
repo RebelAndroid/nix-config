@@ -40,6 +40,13 @@
           home.username = "christopher";
           home.homeDirectory = "/home/christopher";
           programs.direnv.enable = true;
+
+          environment.shellAliases = {
+            btm = "btm --mem_as_value";
+            z = "zoxide";
+            ls = "eza -l";
+            mv = "mv -i";
+          };
         })
       ];
     };
@@ -48,13 +55,36 @@
       inherit pkgs;
       extraSpecialArgs = inputs;
       modules = [
-        ./system/XDG.nix
-        ./applications/CLI-TUI
         ({...}: {
           home.stateVersion = "22.11";
           home.username = "admin";
           home.homeDirectory = "/home/admin";
-          programs.direnv.enable = true;
+
+          environment.shellAliases = {
+            mv = "mv -i";
+          };
+
+          home.packages = with pkgs; [
+            smartmontools # get information about drives
+          ];
+        })
+      ];
+    };
+
+  homeConfigurations."game" = home-manager.lib.homeManagerConfiguration {
+      inherit pkgs;
+      extraSpecialArgs = inputs;
+      modules = [
+        ./sway.nix
+        ./gammastep.nix
+        ({...}: {
+          home.stateVersion = "22.11";
+          home.username = "game";
+          home.homeDirectory = "/home/game";
+
+          environment.shellAliases = {
+            mv = "mv -i";
+          };
         })
       ];
     };
@@ -70,7 +100,7 @@
         ({...}: {
           networking.hostName = "desktop";
           security.polkit.enable = true;
-          services.getty.autologinUser = "christopher";
+          # services.getty.autologinUser = "christopher";
         })
       ];
     };

@@ -29,17 +29,10 @@
   ];
   programs.nano.enable = false;
 
-  environment.shellAliases = {
-    btm = "btm --mem_as_value";
-    z = "zoxide";
-    ls = "eza -l";
-    mv = "mv -i";
-  };
-
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.christopher = {
     isNormalUser = true;
-    extraGroups = ["wheel" "docker"]; # Enable ‘sudo’ for the user.
+    extraGroups = ["docker"]; # Enable ‘sudo’ for the user.
     password = "password";
     packages = with pkgs; [
       git
@@ -47,6 +40,29 @@
     ];
 
     shell = pkgs.fish;
+  };
+
+  users.users.admin = {
+    isNormalUser = true;
+    extraGroups = ["wheel"]; # Enable ‘sudo’ for the user.
+    password = "password";
+    packages = with pkgs; [
+      git
+      home-manager
+      bash
+    ];
+    shell = pkgs.bash;
+  };
+
+  users.users.game = {
+    isNormalUser = true;
+    password = "password";
+    packages = with pkgs; [
+      git
+      home-manager
+      bash
+    ];
+    shell = pkgs.bash;
   };
 
   programs.fish.enable = true;
