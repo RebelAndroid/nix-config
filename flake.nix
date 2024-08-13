@@ -77,6 +77,8 @@
       modules = [
         ./sway.nix
         ./gammastep.nix
+        ./applications/GUI
+        ./applications/CLI-TUI
         ({...}: {
           home.stateVersion = "22.11";
           home.username = "game";
