@@ -41,7 +41,7 @@
           home.homeDirectory = "/home/christopher";
           programs.direnv.enable = true;
 
-          environment.shellAliases = {
+          home.shellAliases = {
             btm = "btm --mem_as_value";
             z = "zoxide";
             ls = "eza -l";
@@ -60,7 +60,7 @@
           home.username = "admin";
           home.homeDirectory = "/home/admin";
 
-          environment.shellAliases = {
+          home.shellAliases = {
             mv = "mv -i";
           };
 
@@ -82,7 +82,7 @@
           home.username = "game";
           home.homeDirectory = "/home/game";
 
-          environment.shellAliases = {
+          home.shellAliases = {
             mv = "mv -i";
           };
         })
