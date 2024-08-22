@@ -97,7 +97,6 @@
       modules = [
         ./configuration.nix
         ./hardware-configuration.nix
-        # ./gnome.nix
         ./smart-log.nix
         ({...}: {
           networking.hostName = "desktop";
@@ -113,8 +112,11 @@
       modules = [
         ./configuration.nix
         ./laptop-hardware-configuration.nix
-        # ./gnome.nix
-        ./kde.nix
+        #./kde.nix
+        ({...}: {
+          programs.light.enable = true;
+          services.getty.autologinUser = "christopher";
+        })
       ];
     };
 

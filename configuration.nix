@@ -32,7 +32,7 @@
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.christopher = {
     isNormalUser = true;
-    extraGroups = ["docker"]; # Enable ‘sudo’ for the user.
+    extraGroups = ["wheel" "docker" "video"]; # wheel - sudo, video - light
     password = "password";
     packages = with pkgs; [
       git
@@ -40,29 +40,6 @@
     ];
 
     shell = pkgs.fish;
-  };
-
-  users.users.admin = {
-    isNormalUser = true;
-    extraGroups = ["wheel"]; # Enable ‘sudo’ for the user.
-    password = "password";
-    packages = with pkgs; [
-      git
-      home-manager
-      bash
-    ];
-    shell = pkgs.bash;
-  };
-
-  users.users.game = {
-    isNormalUser = true;
-    password = "password";
-    packages = with pkgs; [
-      git
-      home-manager
-      bash
-    ];
-    shell = pkgs.bash;
   };
 
   programs.fish.enable = true;
